@@ -1,4 +1,4 @@
-import Foundation
+import Foundation // actually only need 'Darwin' except for Date-based execution time calculation
 
 extension Array {
     mutating func shuffle() {
@@ -26,7 +26,7 @@ func qs_partition(_ list: inout [Int], _ low: Int , _ high: Int ) -> Int {
 
     for j in low..<high {
         if list[j] < pivot {
-            i = i + 1
+            i += 1
             list.swapAt(i, j)
         }
     }
